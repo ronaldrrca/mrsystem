@@ -1,15 +1,6 @@
 <!DOCTYPE html>
-<head>
-     <link rel="stylesheet" href="../css/movil.css" media="screen and (min-width: 380px)">
-    <link rel="stylesheet" href="../css/laptop.css" media="screen and (min-width: 1200px)">
-</head>
-    <header>
-        <span id="logo_header">MRSystem</span>
-        <div id="iconos_header">
-            <img id="icono_menu" src="../imagenes/menu_icono.svg" alt="icono menu">
-            <img id="icono_cerrar_menu" src="../imagenes/cerrar_icono.svg" alt="icono cerrar menu">
-        </div>
-        <nav id="menu_movil">
+<aside>
+<nav id="menu_aside">
             <ul>
                 <li><a href="./administracion.php">Administracion</a></li>
                 <li><a href="./ventas.php">Ventas</a></li>
@@ -23,5 +14,5 @@
                 <li><a href="./inventario.php">Inventario</a></li>
             </ul>
         </nav>
-    </header>
+</aside>
 </html>

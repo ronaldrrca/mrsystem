@@ -17,7 +17,7 @@ $validar=$objUsuario->validarUsuario($usuario, $contrasena);
 //Sí existe una coincidencia con los datos enviados(usuario y contrasena)    
 if ($respuesta = $validar->fetch_assoc()) {
     $_SESSION['admin']=$respuesta['usuario_usuarios'];
-    echo "<meta http-equiv='refresh' content='0;../vista/html/home.php' />";
+    echo "<meta http-equiv='refresh' content='0;../vista/html/administracion.php' />";
 } else {
     echo '<script> alert ("Usuario o contraseña inválida. Presione aceptar para continuar"); </script>';
     echo "<meta http-equiv='refresh' content='0;../vista/html/login.php' />";

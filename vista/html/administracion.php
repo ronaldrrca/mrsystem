@@ -1,5 +1,12 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['admin'])) {
+            header('Location: login.php');
+    }
+?>
+
 <!DOCTYPE html>
-<html lang="en}s">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +14,11 @@
     <title>MRSystem</title>
 </head>
 <body>
-    <?php include './header.php' ?>
+    <?php 
+    include './header.php';
+    include './aside.php';
+    ?>
+
     <main>
         <h1>ADMINISTRACIÓN</h1>
     </main>

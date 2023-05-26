@@ -1,3 +1,7 @@
+body{
+    flex-direction: row;
+}
+
 #iconos_header{
     display: none;
 }
@@ -6,6 +10,49 @@ header{
     justify-content: center;
 }
 
+aside{
+    display: block;
+    width: 15%;
+    min-height: 55.5rem;
+    background-color: #00BCD4;
+}
+
+main{
+    width: 85%;
+}
+
 #menu_movil{
     display: none;
+}
+
+#menu_aside{
+    display: block;
+    margin-top: 6rem;
+}
+
+#menu_aside ul{
+    padding: 2.2rem 0;
+}
+
+#menu_aside ul li{
+    list-style: none;
+}
+
+#menu_aside ul li a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 4.4rem;
+    max-width: 50rem;
+    background-color: #00BCD4;
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#menu_aside ul li a:hover{
+    color: #333;
 }
