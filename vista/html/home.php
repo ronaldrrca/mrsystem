@@ -11,5 +11,6 @@
     <main>
         <h1>ADMINISTRACIÓN</h1>
     </main>
+    <script src="../js/header.js"></script>
 </body>
 </html>

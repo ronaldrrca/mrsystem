@@ -9,7 +9,14 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    position: relative;
+}
+
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,14 +29,115 @@ header{
 
 main{
     width: 100%;
-    min-height: 76.8rem;
+    min-height: 55rem;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 6rem;
+    padding-top: 6rem;
 }
 
-#logo_header{
+#menu_movil{
+    display: none;
+    width: 100%;
+    max-width: 50rem;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+}
+
+#menu_movil ul li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 4.4rem;
+    max-width: 50rem;
+    list-style: none;
+    background-color: #00BCD4;
+    padding-left: 1rem;
     font-size: 2rem;
     color: #fff;
+}
+
+#menu_movil ul li:nth-child(n){
+    border-bottom: 1px solid #fff;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+#logo_header, #logo_header_login{
+    font-size: 2rem;
+    color: #fff;
+}
+
+#logo_header_login{
+    margin: 0 auto;
+}
+
+#iconos_header{
+    display: block;
+}
+
+#icono_cerrar_menu{
+    display: none;
+}
+
+#formulario_login{
+    width: 38rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1.5rem 1rem;
+}
+
+#formulario_login label{
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+#formulario_login input[type=text],
+#formulario_login input[type=password]{
+    width: 100%;
+    height: 3.5rem;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+#formulario_login #boton_ingresar{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4.4rem;
+    background-color: #00BCD4;
+    border-radius: 5px;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input_contenedor{
+    position: relative;
+}
+
+.input_contenedor img{
+    width: 3.4rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
 }
