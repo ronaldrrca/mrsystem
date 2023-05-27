@@ -21,6 +21,40 @@
 
     <main>
         <h1>ADMINISTRACIÓN</h1>
+        <section id="administracion">
+            <div class="elemento_administracion">
+                <span>Inversión</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Compras</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Gastos</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Ventas</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Saldo</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Por ingresar</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Disponible</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Ventas del mes</span>
+                <span>$ 00.000.000,00</span>
+            </div>
+        </section>
     </main>
     <script src="../js/header.js"></script>
 </body>

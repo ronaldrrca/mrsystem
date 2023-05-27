@@ -12,7 +12,7 @@
     <header>
         <span id="logo_header_login">MRSystem</span>
     </header>
-    <main>
+    <main id="login_main">
         <h1>LOGIN</h1>
         <form id="formulario_login" action="../../controlador/loginControlador.php" method="POST">
             <label for="usuario">Usuario</label>

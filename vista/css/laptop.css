@@ -56,3 +56,7 @@ main{
 #menu_aside ul li a:hover{
     color: #333;
 }
+
+#login_main{
+    width: 100%;
+}
