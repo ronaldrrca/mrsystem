@@ -45,11 +45,6 @@ main{
     padding: 6rem 1rem 1rem 1rem;
 }
 
-table{
-    border-collapse: collapse;
-    margin-bottom: 3rem;
-}
-
 h1{
     font-size: 2rem;
     margin-bottom: 4rem;
@@ -238,6 +233,23 @@ h1{
 
 /* Estilos de tablas */
 
+table{
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+    display: block;
+}
+
+tr{
+    cursor: pointer;
+}
+
+tbody{
+    height: 30rem;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 thead tr th{
     height: 3.9rem;
     padding: 0 1rem;
@@ -259,10 +271,15 @@ thead tr img, tbody tr img{
     width: 2.7rem;
 }
 
-tbody tr td{
+tbody tr{
     border-right: 1px solid #ccc;
     font-size: 1.4rem;
     color: #5F727F;
+}
+
+tbody tr:hover{
+    background-color: crimson !important;
+    color: #fff;
 }
 
 tbody tr td:last-child{
@@ -277,16 +294,54 @@ tbody tr:nth-child(even){
     background-color:#E6EBE9;
 }
 
-#tabla_ventas tr td{
-    padding: 0 1rem;
+.id_tabla{
+    width: 4rem;
 }
 
-.valor_tabla, .gastos_tabla{
-    text-align: right;
+.fecha_tabla{
+    width: 10rem;
+}
+
+.valor_tabla{
+    width: 10rem;
+}
+
+.gastos_tabla{
+    width: 8rem;
 }
 
 .canal_tabla{
+    width: 12rem;
+}
+
+.ventaMl_tabla{
+    width: 15rem;
+}
+
+.entregado_tabla{
+    width: 4.8rem;
+}
+
+.cobrado_tabla{
+    width: 4.8rem;
+}
+
+.id_tabla, .fecha_tabla, .valor_tabla, .gastos_tabla, .canal_tabla, .ventaMl_tabla, .entregado_tabla, .cobrado_tabla{
+    border-right: 1px solid #ccc;
+}
+
+.centrar_texto{
+    text-align: center;
+}
+
+.alinear_izquierda_texto{
     text-align: left;
+    padding-left: 1rem;
+}
+
+.alinear_derecha_texto{
+    text-align: right;
+    padding-right: 1rem;
 }
 
 .boton_accion{
@@ -298,10 +353,6 @@ tbody tr:nth-child(even){
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s;
-}
-
-.boton_accion:hover{
-    box-shadow: 5px 5px 5px #aaaaaa;
 }
 
 .ocultar{
