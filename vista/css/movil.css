@@ -42,8 +42,21 @@ main{
     justify-content: flex-start;
     align-items: center;
     margin-top: 6rem;
-    padding-top: 6rem;
+    padding: 6rem 1rem 1rem 1rem;
 }
+
+table{
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+/* Estilos de menu */
 
 #menu_movil{
     display: none;
@@ -80,11 +93,6 @@ main{
     display: none;
 }
 
-h1{
-    font-size: 2rem;
-    margin-bottom: 4rem;
-}
-
 #logo_header, #logo_header_login{
     font-size: 2rem;
     color: #fff;
@@ -101,6 +109,9 @@ h1{
 #icono_cerrar_menu{
     display: none;
 }
+
+
+/* Estilos del logon */
 
 #formulario_login{
     width: 38rem;
@@ -156,6 +167,9 @@ h1{
     top: 0;
     right: 1rem;
 }
+
+
+/* Estilos de administración-home */
 
 #administracion{
     min-width: 39rem;
@@ -221,3 +235,75 @@ h1{
     background-color: #808B96;
 }
 
+
+/* Estilos de tablas */
+
+thead tr th{
+    height: 3.9rem;
+    padding: 0 1rem;
+    background-color: #212331;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+thead tr th{
+    border-right: 1px solid #fff;
+}
+
+thead tr th:last-child{
+    border: none;
+}
+
+thead tr img, tbody tr img{
+    width: 2.7rem;
+}
+
+tbody tr td{
+    border-right: 1px solid #ccc;
+    font-size: 1.4rem;
+    color: #5F727F;
+}
+
+tbody tr td:last-child{
+    border: none;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #F4F6F7 ;
+}
+
+tbody tr:nth-child(even){
+    background-color:#E6EBE9;
+}
+
+#tabla_ventas tr td{
+    padding: 0 1rem;
+}
+
+.valor_tabla, .gastos_tabla{
+    text-align: right;
+}
+
+.canal_tabla{
+    text-align: left;
+}
+
+.boton_accion{
+    display: inline-flex;
+    padding: 1rem 2rem;
+    background-color: #00BCD4;
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.boton_accion:hover{
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.ocultar{
+    display: none;
+}

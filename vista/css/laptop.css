@@ -60,3 +60,12 @@ main{
 #login_main{
     width: 100%;
 }
+
+.ocultar{
+    display: table-cell;
+}
+
+.boton_accion:hover{
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
