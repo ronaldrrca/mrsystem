@@ -37,23 +37,30 @@
             <tbody>
                 <?php 
                     while ($venta = $listar->fetch_assoc()) { ?>
-                    <tr>
+                    <tr onClick="verVenta(<?php echo $venta['id_ventas'] ?>)">
                         <td class="id_tabla ocultar centrar_texto"> <?php echo $venta['id_ventas'] ?></td>
                         <td class="fecha_tabla centrar_texto"> <?php echo $venta['fecha_ventas'] ?></td>
-                        <td class="valor_tabla alinear_derecha_texto"> <?php echo $venta['valor_ventas'] ?></td>
-                        <td class="gastos_tabla ocultar alinear_derecha_texto"> <?php echo $venta['gastos_ventas'] ?></td>
+                        <td class="valor_tabla alinear_derecha_texto"> <?php echo number_format($venta['valor_ventas'], 2, ",", ".") ?></td>
+                        <td class="gastos_tabla ocultar alinear_derecha_texto"> <?php echo number_format($venta['gastos_ventas'], 2, ",", ".") ?></td>
                         <td class="canal_tabla alinear_izquierda_texto"> <?php echo $venta['canal_ventas'] ?></td>
                         <td class="ventaMl_tabla ocultar centrar_texto"> <?php echo $venta['numero_ventaMl_ventas'] ?></td>
-                        <td class="entregado_tabla centrar_texto"><img src="../imagenes/done_icon.svg" alt="icono verificacion"></td>
-                        <td class="cobrado_tabla centrar_texto"><img src="../imagenes/done_icon.svg" alt="icono verificacion"></td>
+                        <td class="entregado_tabla centrar_texto">
+                            <?php if ($venta['entregado_ventas']=="si") { ?>
+                                <img src="../imagenes/done_icon.svg" alt="icono verificacion">
+                            <?php } ?>
+                        </td>
+                        <td class="cobrado_tabla centrar_texto">
+                            <?php if ($venta['cobrado_ventas']=="si") { ?>
+                                <img src="../imagenes/done_icon.svg" alt="icono verificacion">
+                            <?php } ?>
+                        </td>
                     </tr>
                 <?php } ?>
-                
-                
             </tbody>
         </table>
         <a class="boton_accion" href="./registrarVenta.php">Registrar Venta</a>
     </main>
     <script src="../js/header.js"></script>
+    <script src="../js/ventas.js"></script>
 </body>
 </html>

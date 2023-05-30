@@ -235,15 +235,15 @@ h1{
 
 table{
     border-collapse: collapse;
-    margin-bottom: 3rem;
     display: block;
+    border-bottom: 2px solid #181828;
 }
 
-tr{
+#tabla_ventas tbody tr{
     cursor: pointer;
 }
 
-tbody{
+ #tabla_ventas tbody{
     height: 30rem;
     display: block;
     overflow-y: scroll;
@@ -252,14 +252,10 @@ tbody{
 
 thead tr th{
     height: 3.9rem;
-    padding: 0 1rem;
     background-color: #212331;
     color: #fff;
     font-size: 1.4rem;
     font-weight: 700;
-}
-
-thead tr th{
     border-right: 1px solid #fff;
 }
 
@@ -277,9 +273,8 @@ tbody tr{
     color: #5F727F;
 }
 
-tbody tr:hover{
-    background-color: crimson !important;
-    color: #fff;
+tbody tr td{
+    height: 2.9rem;
 }
 
 tbody tr td:last-child{
@@ -294,16 +289,20 @@ tbody tr:nth-child(even){
     background-color:#E6EBE9;
 }
 
+.tabla_ventas{
+    height: 30rem;
+}
+
 .id_tabla{
     width: 4rem;
 }
 
 .fecha_tabla{
-    width: 10rem;
+    width: 9rem;
 }
 
 .valor_tabla{
-    width: 10rem;
+    width: 9rem;
 }
 
 .gastos_tabla{
@@ -326,7 +325,23 @@ tbody tr:nth-child(even){
     width: 4.8rem;
 }
 
-.id_tabla, .fecha_tabla, .valor_tabla, .gastos_tabla, .canal_tabla, .ventaMl_tabla, .entregado_tabla, .cobrado_tabla{
+.descripcion_tabla{
+    display: flex;
+    align-items: center;
+    width: 15.4rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cantidad_tabla{
+    width: 4rem;
+}
+
+.precio_tabla, .subtotal_tabla{
+    width: 10rem;
+}
+
+.id_tabla, .fecha_tabla, .valor_tabla, .gastos_tabla, .canal_tabla, .ventaMl_tabla, .entregado_tabla, .cobrado_tabla, .descripcion_tabla, .cantidad_tabla, .precio_tabla, .subtotal_tabla{
     border-right: 1px solid #ccc;
 }
 
@@ -336,17 +351,18 @@ tbody tr:nth-child(even){
 
 .alinear_izquierda_texto{
     text-align: left;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
 }
 
 .alinear_derecha_texto{
     text-align: right;
-    padding-right: 1rem;
+    padding-right: 0.5rem;
 }
 
-.boton_accion{
+.boton_accion, .boton_regresar{
     display: inline-flex;
     padding: 1rem 2rem;
+    margin-top: 3rem;
     background-color: #00BCD4;
     font-size: 1.6rem;
     color: #fff;
@@ -355,6 +371,117 @@ tbody tr:nth-child(even){
     transition: all 0.3s;
 }
 
+.boton_accion{
+    background-color: #00BCD4;
+}
+
+.boton_regresar{
+    background-color: crimson;
+}
+
 .ocultar{
     display: none;
+}
+
+.celda_oculta{
+    background-color: #fff;
+    border: none;
+}
+
+#datos_cabecera_venta{
+    width: 39.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem 0;
+    background-color: #F4F6F7;
+}
+
+#total_venta{
+    width: 20rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    background-color: #212331;
+}
+
+#total_venta span{
+    height: 2.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0.5rem;
+    margin-left: 3rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.dato_cabecera_venta{
+    display: flex;
+    flex-direction: column;
+}
+
+.dato_cabecera_venta label{
+    font-size: 1.4rem;
+}
+
+.dato_cabecera_venta input[type=text]{
+    height: 2.3rem;
+    border: none;
+    font-size: 1.4rem;
+    background-color: #E6EBE9;
+    color: #5F727F;
+}
+
+.dato_cabecera_venta #id{
+    width: 3.7rem;
+    text-align: center;
+}
+
+.dato_cabecera_venta #fecha{
+    width: 10rem;
+    text-align: center;
+}
+
+.dato_cabecera_venta #gastos{
+    width: 8rem;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.dato_cabecera_venta #canal{
+    width: 12rem;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.dato_cabecera_venta #ventaMl{
+    width: 14rem;
+    text-align: center;
+}
+
+#datos_cabecera_venta #entregado,
+#datos_cabecera_venta #cobrado
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-top: 2rem;
+}
+
+#datos_cabecera_venta #entregado label,
+#datos_cabecera_venta #cobrado label{
+    margin-right: 0.5rem;
+}
+
+#separador_datos_cabeceraVentas{
+    width: 100%;
+    height: 3rem;
+    display: block;
 }

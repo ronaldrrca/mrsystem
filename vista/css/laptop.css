@@ -65,7 +65,56 @@ main{
     display: table-cell;
 }
 
-.boton_accion:hover{
+.boton_accion:hover,
+.boton_regresar:hover
+{
     box-shadow: 5px 5px 5px #aaaaaa;
 }
+
+.fecha_tabla{
+    width: 10rem;
+}
+
+.valor_tabla{
+    width: 10rem;
+}
+
+.descripcion_tabla{
+    display: table-cell;
+    width: 60rem;
+}
+
+.cantidad_tabla{
+    width: 6rem;
+}
+
+.alinear_izquierda_texto{
+    padding-left: 1rem;
+}
+
+.alinear_derecha_texto{
+    padding-right: 1rem;
+}
+
+
+tbody tr:hover{
+    background-color: crimson;
+    color: #fff;
+}
+
+#datos_cabecera_venta{
+    width: 86rem;
+    padding: 2rem 0;
+}
+
+#separador_datos_cabeceraVentas{
+    display: none;
+}
+
+#total_venta span{
+    padding-right: 1rem;
+    
+}
+
+
 
