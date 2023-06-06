@@ -426,7 +426,8 @@ tbody tr:nth-child(even), .tabla_verVenta .linea_venta:nth-child(odd){
 }
 
 
-#total_venta, #contenedor_total span{
+#total_venta, #contenedor_total span,
+#total_compra{
     height: 2.9rem;
     display: flex;
     flex-direction: row;

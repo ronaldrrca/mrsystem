@@ -83,7 +83,7 @@ $consultar = $conexion->query("call consultarUltimoIdCompras()");
 
 
 
-  public function registrarLineaCompra($idCompra, $idArticulo, $descripcionArticulo, $cantidadArticulo, $valorArticulo, $subtotalArticulo, $canalArticulo, $linkArticulo){
+  public function registrarLineaCompra($idCompra, $idArticulo, $descripcionArticulo, $cantidadArticulo, $valorArticulo, $subtotalArticulo, $canalArticulo){
     $this->id=$idCompra;
     $this->id_articulo=$idArticulo;
     $this->descripcion_articulo=$descripcionArticulo;
@@ -91,16 +91,14 @@ $consultar = $conexion->query("call consultarUltimoIdCompras()");
     $this->valor_articulo=$valorArticulo;
     $this->subtotal_articulo=$subtotalArticulo;
     $this->canal=$canalArticulo;
-    $this->link_articulo=$linkArticulo;
-
+    
     //Se instancia la clase conexión
     $objConexion = new Conexion();
 
     //Se invoca la función conectarse d ela clase Conexion
     $conexion = $objConexion -> conectarse();
 
-    $registrar = $conexion->query("call registrarLineaCompra('$this->id', '$this->id_articulo', '$this->descripcion_articulo', '$this->cantidad_articulo', 
-    '$this->valor_articulo', '$this->subtotal_articulo', '$this->canal', '$this->link_articulo')");
+    $registrar = $conexion->query("call registrarLineaCompra('$this->id', '$this->id_articulo', '$this->descripcion_articulo', '$this->cantidad_articulo', '$this->valor_articulo', '$this->subtotal_articulo', '$this->canal')");
 
     return $registrar;
   }//Fin de la función registrarLineaVenta
