@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>MRSystem</title>
 </head>
 <body>
@@ -58,7 +59,9 @@
                 <?php } ?>
             </tbody>
         </table>
-        <a class="boton_accion" href="./registrarVenta.php">Registrar Venta</a>
+        <div class="contenedor_botones">
+            <a class="boton_accion" href="./registrarVenta.php">Registrar Venta</a>
+        </div>
     </main>
     <script src="../js/header.js"></script>
     <script src="../js/ventas.js"></script>

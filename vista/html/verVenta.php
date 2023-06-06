@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>MRSystem</title>
 </head>
 <body>
@@ -73,17 +74,14 @@
                             <td class="subtotal_tabla alinear_derecha_texto"><?php echo number_format($datos_venta[$i]['subtotal_lineas_ventas'], 2, ",", ".") ?></td>
                         </tr>
                     <?php } ?>
-                        <!-- <tr>
-                            <td class="celda_oculta"></td>
-                            <td class="celda_oculta"></td>
-                            <td class="alinear_derecha_texto"><b>Total</b></td>
-                            <td class="subtotal_tabla alinear_derecha_texto"><b><?php echo "$ " . number_format($datos_venta[0]['valor_ventas'], 2, ",", "."); ?></b></td>
-                        </tr> -->
+                        
                 </tbody>
             </table>
-            <div id="total_venta"><span>Total</span><span><?php echo "$ " . number_format($datos_venta[0]['valor_ventas'], 2, ",", ".");?></span></div>
+            <div id="contenedor_total"><span>Total $</span><input type="text" name="total" id="total_venta" class="total_venta" value="<?php echo number_format($datos_venta[0]['valor_ventas'], 2, ",", ".") ?>" readonly></div>
         </div>
-        <a class="boton_regresar" href="<?=$_SERVER['HTTP_REFERER']?>">Regresar</a>
+        <div class="contenedor_botones">
+            <a class="boton_regresar" href="<?=$_SERVER['HTTP_REFERER']?>">Regresar</a>
+        </div>
     </main>
     <script src="../js/header.js"></script>
 </body>

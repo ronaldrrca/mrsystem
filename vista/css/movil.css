@@ -250,7 +250,17 @@ table{
     overflow-x: hidden;
 }
 
-thead tr th{
+.tabla_verVenta > div{
+    display: flex;
+}
+
+.tabla_verVenta > div label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+thead tr th, .tabla_verVenta > div:first-child{
     height: 3.9rem;
     background-color: #212331;
     color: #fff;
@@ -273,7 +283,7 @@ tbody tr{
     color: #5F727F;
 }
 
-tbody tr td{
+tbody tr td, .tabla_verVenta > div:nth-child(2), .tabla_verVenta > div:nth-child(3), .tabla_verVenta > div:nth-child(4){
     height: 2.9rem;
 }
 
@@ -281,13 +291,26 @@ tbody tr td:last-child{
     border: none;
 }
 
-tbody tr:nth-child(odd){
+.linea_venta input[type=number], .linea_venta input[type=text]{
+    background-color:unset;
+    border: none;
+    border-right: 1px solid #ccc;
+}
+
+
+
+.tabla_verVenta .linea_venta .subtotal_tabla{
+    border: none;
+}
+
+tbody tr:nth-child(odd), .tabla_verVenta .linea_venta:nth-child(even){
     background-color: #F4F6F7 ;
 }
 
-tbody tr:nth-child(even){
+tbody tr:nth-child(even), .tabla_verVenta .linea_venta:nth-child(odd){
     background-color:#E6EBE9;
 }
+
 
 .tabla_ventas{
     height: 30rem;
@@ -341,7 +364,7 @@ tbody tr:nth-child(even){
     width: 10rem;
 }
 
-.id_tabla, .fecha_tabla, .valor_tabla, .gastos_tabla, .canal_tabla, .ventaMl_tabla, .entregado_tabla, .cobrado_tabla, .descripcion_tabla, .cantidad_tabla, .precio_tabla, .subtotal_tabla{
+.id_tabla, .fecha_tabla, .valor_tabla, .gastos_tabla, .canal_tabla, .ventaMl_tabla, .entregado_tabla, .cobrado_tabla, .descripcion_tabla, .precio_tabla, .cantidad_tabla{
     border-right: 1px solid #ccc;
 }
 
@@ -361,14 +384,14 @@ tbody tr:nth-child(even){
 
 .boton_accion, .boton_regresar{
     display: inline-flex;
-    padding: 1rem 2rem;
-    margin-top: 3rem;
-    background-color: #00BCD4;
+    padding: 1rem 2rem;    
+    border-radius: 5px;
+    transition: all 0.3s;
     font-size: 1.6rem;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 .boton_accion{
@@ -379,14 +402,18 @@ tbody tr:nth-child(even){
     background-color: crimson;
 }
 
+.contenedor_botones{
+    width: 30rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+
 .ocultar{
     display: none;
 }
 
-.celda_oculta{
-    background-color: #fff;
-    border: none;
-}
 
 #datos_cabecera_venta{
     width: 39.4rem;
@@ -398,27 +425,27 @@ tbody tr:nth-child(even){
     background-color: #F4F6F7;
 }
 
-#total_venta{
-    width: 20rem;
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: auto;
-    background-color: #212331;
-}
 
-#total_venta span{
+#total_venta, #contenedor_total span{
     height: 2.9rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     padding-right: 0.5rem;
-    margin-left: 3rem;
     font-weight: 600;
     font-size: 1.4rem;
     color: #fff;
+    width: 10rem;
+    text-align: right;
+    background-color: #212331;
+}
+
+#contenedor_total{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .dato_cabecera_venta{
@@ -430,7 +457,10 @@ tbody tr:nth-child(even){
     font-size: 1.4rem;
 }
 
-.dato_cabecera_venta input[type=text]{
+.dato_cabecera_venta input[type=text],
+.dato_cabecera_venta input[type=date],
+select
+{
     height: 2.3rem;
     border: none;
     font-size: 1.4rem;
@@ -485,3 +515,17 @@ tbody tr:nth-child(even){
     height: 3rem;
     display: block;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#formulario_registrar_venta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
