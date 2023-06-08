@@ -22,6 +22,15 @@
 
     <main>
         <h1>REGISTRAR GASTO</h1>
+        <form id="formulario_registrar_gasto" action="../../controlador/registrarGastoControlador.php" method="POST">
+            <label for="fecha">Fecha</label>
+            <input id="fecha" type="date" name="fecha" required autofocus>
+            <label for="descripcion">Descripción</label>
+            <input id="descripcion" type="text" name="descripcion" required>
+            <label for="monto">Monto</label>
+            <input type="number" id="monto" name="monto" required>
+            <input class="boton_accion" type="submit" value="Registrar gasto">
+        </form>
     </main>
     <script src="../js/header.js"></script>
 </body>

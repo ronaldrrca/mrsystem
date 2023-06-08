@@ -108,7 +108,7 @@ h1{
 
 /* Estilos del logon */
 
-#formulario_login{
+#formulario_, #formulario_registrar_gasto{
     width: 38rem;
     display: flex;
     flex-direction: column;
@@ -117,14 +117,17 @@ h1{
     padding: 1.5rem 1rem;
 }
 
-#formulario_login label{
+#formulario_login label, #formulario_registrar_gasto{
     margin-bottom: 0.3rem;
     font-weight: 700;
     font-size: 1.6rem;
 }
 
 #formulario_login input[type=text],
-#formulario_login input[type=password]{
+#formulario_login input[type=password],
+#formulario_registrar_gasto input[type=text],
+#formulario_registrar_gasto input[type=number],
+#formulario_registrar_gasto input[type=date]{
     width: 100%;
     height: 3.5rem;
     margin-bottom: 3rem;
@@ -354,6 +357,7 @@ tbody tr:nth-child(even), .tabla_verVenta .linea_venta:nth-child(odd){
     width: 15.4rem;
     overflow: hidden;
     white-space: nowrap;
+    padding-left: 1rem;
 }
 
 .cantidad_tabla{
@@ -384,6 +388,8 @@ tbody tr:nth-child(even), .tabla_verVenta .linea_venta:nth-child(odd){
 
 .boton_accion, .boton_regresar{
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem 2rem;    
     border-radius: 5px;
     transition: all 0.3s;
