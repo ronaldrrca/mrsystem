@@ -3,6 +3,7 @@
     if (!isset($_SESSION['admin'])) {
             header('Location: login.php');
     }
+    include '../../controlador/listarArticulosControlador.php'
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +23,28 @@
 
     <main>
         <h1>ARTÍCULOS</h1>
+        <table id="tabla_ventas">
+            <thead>
+                <tr>
+                    <th class="id_tabla ocultar">ID</th>
+                    <th class="descripcion_tabla_articulos">DESCRIPCIÓN</th>
+                    <th class="valor_tabla">PRECIO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    while ($articulo = $listar->fetch_assoc()) { ?>
+                    <tr>
+                        <td class="id_tabla ocultar centrar_texto"> <?php echo $articulo['id_articulos'] ?></td>
+                        <td class="descripcion_tabla_articulos alinear_izquierda_texto"> <?php echo $articulo['descripcion_articulos'] ?></td>
+                        <td class="valor_tabla alinear_derecha_texto"> <?php echo number_format($articulo['precio_sugerido_articulos'], 2, ",", ".") ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+        <div class="contenedor_botones">
+            <a class="boton_accion" href="./crearArticulo.php">Crear artículo</a>
+        </div>
     </main>
     <script src="../js/header.js"></script>
 </body>

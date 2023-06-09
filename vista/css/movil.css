@@ -263,7 +263,7 @@ table{
     align-items: center;
 }
 
-thead tr th, .tabla_verVenta > div:first-child{
+thead tr th, .tabla_verVenta > div:first-child, th.descripcion_tabla_articulos{
     height: 3.9rem;
     background-color: #212331;
     color: #fff;
@@ -286,7 +286,7 @@ tbody tr{
     color: #5F727F;
 }
 
-tbody tr td, .tabla_verVenta > div:nth-child(2), .tabla_verVenta > div:nth-child(3), .tabla_verVenta > div:nth-child(4){
+tbody tr td, .tabla_verVenta > div:nth-child(2), .tabla_verVenta > div:nth-child(3), .tabla_verVenta > div:nth-child(4), .descripcion_tabla_articulos{
     height: 2.9rem;
 }
 
@@ -351,13 +351,17 @@ tbody tr:nth-child(even), .tabla_verVenta .linea_venta:nth-child(odd){
     width: 4.8rem;
 }
 
-.descripcion_tabla{
+.descripcion_tabla, .descripcion_tabla_articulos{
     display: flex;
     align-items: center;
     width: 15.4rem;
     overflow: hidden;
     white-space: nowrap;
     padding-left: 1rem;
+}
+
+.descripcion_tabla_articulos{
+    width: 30rem;
 }
 
 .cantidad_tabla{
@@ -368,7 +372,7 @@ tbody tr:nth-child(even), .tabla_verVenta .linea_venta:nth-child(odd){
     width: 10rem;
 }
 
-.id_tabla, .fecha_tabla, .valor_tabla, .gastos_tabla, .canal_tabla, .ventaMl_tabla, .entregado_tabla, .cobrado_tabla, .descripcion_tabla, .precio_tabla, .cantidad_tabla{
+.id_tabla, .fecha_tabla, .valor_tabla, .gastos_tabla, .canal_tabla, .ventaMl_tabla, .entregado_tabla, .cobrado_tabla, .descripcion_tabla, .precio_tabla, .cantidad_tabla, .descripcion_tabla_articulos{
     border-right: 1px solid #ccc;
 }
 

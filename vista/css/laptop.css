@@ -84,6 +84,10 @@ main{
     width: 60rem;
 }
 
+.descripcion_tabla_articulos{
+    width: 60rem;
+}
+
 .cantidad_tabla{
     width: 6rem;
 }

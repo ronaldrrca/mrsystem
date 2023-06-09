@@ -45,22 +45,18 @@ $listar = $conexion->query("call listarArticulos()");
 }//Fin de la funcion listarArticulos
 
 
-public function crearArticulo($descripcionArticulo, $precioArticulo, $inventarioArticulo, $transitoRonald, $transitoMarianna, $transitoCelia){
+public function crearArticulo($descripcionArticulo, $precioArticulo, $inventarioArticulo){
   $this->descripcion=$descripcionArticulo;
   $this->precio_sugerido=$precioArticulo;
   $this->inventario=$inventarioArticulo;
-  $this->transito_ronald=$transitoRonald;
-  $this->transito_marianna=$transitoMarianna;
-  $this->transito_celia=$transitoCelia;
   
-
   //Se instancia la clase Conexion
   $objConexion = new Conexion();
 
   //Se invoca la función conectarse() de la clase Conexion
   $conexion = $objConexion -> conectarse();
 
-     $crear = $conexion->query("call crearArticulo('$this->descripcion', '$this->precio_sugerido', '$this->inventario=$inventarioArticulo', '$this->transito_ronald', '$this->transito_marianna', '$this->transito_celia')");
+     $crear = $conexion->query("call crearArticulo('$this->descripcion', '$this->precio_sugerido', '$this->inventario=$inventarioArticulo')");
 
 
     //Se retorna el resultado de la consulta
