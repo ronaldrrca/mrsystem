@@ -3,6 +3,7 @@
     if (!isset($_SESSION['admin'])) {
             header('Location: login.php');
     }
+    include '../../controlador/adminControlador.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,35 +26,35 @@
         <section id="administracion">
             <div class="elemento_administracion">
                 <span>Inversión</span>
-                <span>$ 00.000.000,00</span>
+                <span>$ 1.972.626,25</span>
             </div>
             <div class="elemento_administracion">
                 <span>Compras</span>
-                <span>$ 00.000.000,00</span>
+                <span><?php echo "$ " . number_format($totalCompras, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
                 <span>Gastos</span>
-                <span>$ 00.000.000,00</span>
+                <span><?php echo "$ " . number_format($totalGastos, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
                 <span>Ventas</span>
-                <span>$ 00.000.000,00</span>
+                <span><?php echo "$ " . number_format($totalVentas, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
                 <span>Saldo</span>
-                <span>$ 00.000.000,00</span>
+                <span><?php echo "$ " . number_format($saldo, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
                 <span>Por ingresar</span>
-                <span>$ 00.000.000,00</span>
+                <span><?php echo "$ " . number_format($porIngresar, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
                 <span>Disponible</span>
-                <span>$ 00.000.000,00</span>
+                <span><?php echo "$ " . number_format($disponible, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
                 <span>Ventas del mes</span>
-                <span>$ 00.000.000,00</span>
+                <span><?php echo "$ " . number_format($ventasMes, 2, ",", ".") ?></span>
             </div>
         </section>
     </main>

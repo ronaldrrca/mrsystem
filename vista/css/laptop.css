@@ -6,9 +6,9 @@ body{
     display: none;
 }
 
-header{
+/* header{
     justify-content: center;
-}
+} */
 
 aside{
     display: block;
@@ -117,7 +117,10 @@ tbody tr:hover{
 
 #total_venta span{
     padding-right: 1rem;
-    
+}
+
+#cerrar_sesion{
+    display: block;
 }
 
 

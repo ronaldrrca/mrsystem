@@ -5,6 +5,7 @@
 </head>
     <header>
         <span id="logo_header">MRSystem</span>
+        <a href="../../controlador/cerrarSesionControlador.php" id="cerrar_sesion">Cerrar sesión</a>
         <div id="iconos_header">
             <img id="icono_menu" src="../imagenes/menu_icono.svg" alt="icono menu">
             <img id="icono_cerrar_menu" src="../imagenes/cerrar_icono.svg" alt="icono cerrar menu">
@@ -21,6 +22,7 @@
                 <li><a href="./articulos.php">Artículos</a></li>
                 <li><a href="./crearArticulo.php">Crear artículo</a></li>
                 <li><a href="./inventario.php">Inventario</a></li>
+                <li><a href="../../controlador/cerrarSesionControlador.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>

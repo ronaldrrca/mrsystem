@@ -93,6 +93,13 @@ h1{
     color: #fff;
 }
 
+#cerrar_sesion{
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+}
+
 #logo_header_login{
     margin: 0 auto;
 }
@@ -108,7 +115,7 @@ h1{
 
 /* Estilos del logon */
 
-#formulario_, #formulario_registrar_gasto{
+#formulario_, #formulario_registrar_gasto, #formulario_login{
     width: 38rem;
     display: flex;
     flex-direction: column;
