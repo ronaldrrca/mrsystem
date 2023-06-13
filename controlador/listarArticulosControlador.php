@@ -7,7 +7,7 @@ require_once('../../modelo/articulos.php');
 
 //Se invoca la función litarusuarios
 $listar=$objArticulos->listarArticulos();
-$arrayArticulos = array();
+// $arrayArticulos = array();
 
 
 

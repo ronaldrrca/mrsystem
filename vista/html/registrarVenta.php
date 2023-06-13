@@ -27,7 +27,7 @@
             <div id="datos_cabecera_venta">
                 <div class="dato_cabecera_venta">
                     <label for="fecha">Fecha</label>
-                    <input type="date" name="fecha" id="fecha" value="">
+                    <input type="date" name="fecha" id="fecha">
                 </div>
                 <div class="dato_cabecera_venta">
                     <label for="gastos">Gastos</label>
@@ -46,15 +46,15 @@
                 <div id="separador_datos_cabeceraVentas"></div>
                 <div class="dato_cabecera_venta">
                     <label for="ventaMl">Venta ML</label>
-                    <input type="text" name="ventaMl" id="ventaMl" value="">
+                    <input type="text" name="ventaMl" id="ventaMl">
                 </div>
                 <div class="dato_cabecera_venta" id="entregado">
                     <label for="entregado">Entregado</label>
-                    <input type="checkbox" name="entregado">
+                    <input type="checkbox" name="entregado" value="si">
                 </div>
                 <div class="dato_cabecera_venta" id="cobrado">
                     <label for="cobrado">Cobrado</label>
-                    <input type="checkbox" name="cobrado">
+                    <input type="checkbox" name="cobrado" value="si">
                 </div>
             </div>
             <div class="tabla_verVenta">

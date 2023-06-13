@@ -19,5 +19,5 @@ array_push($datos_compra, $elemento);
 
 
 // Imprimimos el array en formato JSON
-// print_r(json_encode($arrayCompra));
+// print_r(json_encode($datos_compra));
 // die();

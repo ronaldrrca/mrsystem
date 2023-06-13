@@ -10,9 +10,9 @@ require_once('../modelo/gastos.php');
 $fechaVenta=$_POST['fecha'];
 $gastos_venta=$_POST['gastos'];
 $canal_venta=$_POST['canal'];
-$ventaMl_venta=isset($_POST['ventaMl']) ? $_POST['ventaMl'] : "no";
-$entregado_venta=isset($_POST['entregado']) ? "si" : "no";
-$cobrado_venta=isset($_POST['cobrado']) ? "si" : "no";
+$numeroMl_venta=isset($_POST['ventaMl']) ? $_POST['ventaMl'] : "";
+$entregado_venta=isset($_POST['entregado']) ? $_POST['entregado'] : "no";
+$cobrado_venta=isset($_POST['cobrado']) ? $_POST['cobrado'] : "no";
 $valor_venta=$_POST['total'];
 $posicion_separacion;//Se obtiene la posición que nos permitirá separar el id de la decsripción en variables diferentes 
 
@@ -55,7 +55,7 @@ if ($articulo_linea_3 && $cantidad_linea_3 && $valor_linea_3 && $subtotal_linea_
 $objVenta=new Ventas;
 
 //Se registra la venta(con los datos del encabezado)
-$registrarVenta=$objVenta->registrarVenta($fechaVenta, $valor_venta, $gastos_venta, $canal_venta, $ventaMl_venta, $entregado_venta, $cobrado_venta);
+$registrarVenta=$objVenta->registrarVenta($fechaVenta, $valor_venta, $gastos_venta, $canal_venta, $numeroMl_venta, $entregado_venta, $cobrado_venta);
 
   //Consicional para revisar sí se registro correctamente la venta
   if ($registrarVenta) {
