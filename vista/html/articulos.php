@@ -33,11 +33,11 @@
             </thead>
             <tbody>
                 <?php 
-                    while ($articulo = $listar->fetch_assoc()) { ?>
+                    for ($i=0; $i < count($arrayArticulos); $i++) { ?>
                     <tr>
-                        <td class="id_tabla ocultar centrar_texto"> <?php echo $articulo['id_articulos'] ?></td>
-                        <td class="descripcion_tabla_articulos alinear_izquierda_texto"> <?php echo $articulo['descripcion_articulos'] ?></td>
-                        <td class="valor_tabla alinear_derecha_texto"> <?php echo number_format($articulo['precio_sugerido_articulos'], 2, ",", ".") ?></td>
+                        <td class="id_tabla ocultar centrar_texto"> <?php echo $arrayArticulos[$i]['id_articulos'] ?></td>
+                        <td class="descripcion_tabla_articulos alinear_izquierda_texto"> <?php echo $arrayArticulos[$i]['descripcion_articulos'] ?></td>
+                        <td class="valor_tabla alinear_derecha_texto"> <?php echo number_format($arrayArticulos[$i]['precio_sugerido_articulos'], 2, ",", ".") ?></td>
                     </tr>
                 <?php } ?>
             </tbody>

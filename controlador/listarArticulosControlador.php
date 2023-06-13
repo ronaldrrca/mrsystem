@@ -7,14 +7,14 @@ require_once('../../modelo/articulos.php');
 
 //Se invoca la función litarusuarios
 $listar=$objArticulos->listarArticulos();
-// $arrayArticulos = array();
+$arrayArticulos = array();
 
 
 
 //Recibimos la respuesta y la almacenamos en un array
-// while ($elemento = $listar->fetch_assoc()) {
-// array_push($arrayArticulos, $elemento);
-// }
+while ($elemento = $listar->fetch_assoc()) {
+array_push($arrayArticulos, $elemento);
+}
 
 
 //Imprimimos el array en formato JSON
