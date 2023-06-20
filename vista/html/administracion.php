@@ -25,8 +25,8 @@
         <h1>ADMINISTRACIÓN</h1>
         <section id="administracion">
             <div class="elemento_administracion">
-                <span>Inversión</span>
-                <span>$ 1.972.626,25</span>
+                <span>Valor inv. Aprox.</span>
+                <span><?php echo "$ " . number_format($totalValorInventario, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
                 <span>Compras</span>

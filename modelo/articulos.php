@@ -65,6 +65,19 @@ public function crearArticulo($descripcionArticulo, $precioArticulo, $inventario
 }
 
 
+public function consultarValorInvetario(){
+    //Se instancia la clase Conexion
+    $objConexion = new Conexion();
+
+    //Se invoca la función conectarse() de la clase Conexion
+    $conexion = $objConexion -> conectarse();
+
+    $consultar = $conexion->query("call consutarValorVentaInventario()");
+
+    return $consultar;
+}
+
+
 
 
 
