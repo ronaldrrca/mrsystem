@@ -3,7 +3,7 @@
 require_once('../../modelo/compras.php');
 
 $idCompra=$_GET['id_compra'];
-// echo $idVenta; die();
+// echo $idCompra; die();
 
 //Se instancia la clase usuarios
   $objCompras=new Compras;

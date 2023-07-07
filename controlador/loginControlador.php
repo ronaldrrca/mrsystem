@@ -23,11 +23,6 @@ if ($respuesta = $validar->fetch_assoc()) {
     echo "<meta http-equiv='refresh' content='0;../vista/html/login.php' />";
 }
 
-
-
-
-
-
   
   
  
