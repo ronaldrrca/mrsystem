@@ -54,8 +54,8 @@
                                     <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] ?></option><?php } ?>
                         </datalist>
                     <input class="cantidad_tabla centrar_texto" name="cantidad_linea_1" for="cantidad" type="number" id="cantidad_linea_1">
-                    <input class="precio_tabla alinear_derecha_texto" name="valor_linea_1" for="precio" type="number" id="valor_linea_1">
-                    <input class="subtotal_tabla alinear_derecha_texto" name="subtotal_linea_1" for="subtotal" type="number" id="subtotal_linea_1" readonly >
+                    <input class="precio_tabla alinear_derecha_texto" name="valor_linea_1" for="precio" type="number" id="valor_linea_1" step="0.01">
+                    <input class="subtotal_tabla alinear_derecha_texto" name="subtotal_linea_1" for="subtotal" type="number" id="subtotal_linea_1" step="0.01" readonly >
                 </div>
                 <div class="linea_venta">
                 <input type="text" list="articulo2" name="articulo_2" id="articulo_2" class="descripcion_tabla">
@@ -64,8 +64,8 @@
                                     <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] ?></option><?php } ?>
                         </datalist>
                     <input class="cantidad_tabla centrar_texto" name="cantidad_linea_2" for="cantidad" type="number" id="cantidad_linea_2">
-                    <input class="precio_tabla alinear_derecha_texto" name="valor_linea_2" for="precio" type="number" id="valor_linea_2">
-                    <input class="subtotal_tabla alinear_derecha_texto" name="subtotal_linea_2" for="subtotal" type="number" id="subtotal_linea_2" readonly >
+                    <input class="precio_tabla alinear_derecha_texto" name="valor_linea_2" for="precio" type="number" id="valor_linea_2" step="0.01">
+                    <input class="subtotal_tabla alinear_derecha_texto" name="subtotal_linea_2" for="subtotal" type="number" id="subtotal_linea_2" step="0.01" readonly >
                 </div>
                 <div class="linea_venta">
                 <input type="text" list="articulo3" name="articulo_3" id="articulo_3" class="descripcion_tabla">
@@ -74,8 +74,8 @@
                                     <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] ?></option><?php } ?>
                         </datalist>
                     <input class="cantidad_tabla centrar_texto" name="cantidad_linea_3" for="cantidad" type="number" id="cantidad_linea_3">
-                    <input class="precio_tabla alinear_derecha_texto" name="valor_linea_3" for="precio" type="number" id="valor_linea_3">
-                    <input class="subtotal_tabla alinear_derecha_texto" name="subtotal_linea_3" for="subtotal" type="number" id="subtotal_linea_3" readonly >
+                    <input class="precio_tabla alinear_derecha_texto" name="valor_linea_3" for="precio" type="number" id="valor_linea_3" step="0.01">
+                    <input class="subtotal_tabla alinear_derecha_texto" name="subtotal_linea_3" for="subtotal" type="number" id="subtotal_linea_3" step="0.01" readonly >
                 </div>
             </div>
             <div id="contenedor_total"><span>Total $</span><input type="text" name="total" id="total_compra" class="total_venta" value="0.00" readonly></div>
