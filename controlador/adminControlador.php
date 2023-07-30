@@ -24,9 +24,11 @@ $resultadoVentas = $consultaVentas->fetch_assoc();
 $consultaPorIngresar = $objVentas->consultarTotalPorIngresar();
 $resultadoPorIngresar = $consultaPorIngresar->fetch_assoc();
 
-
 $consultarVentasMes = $objVentas->consultarTotalVentasMes(date("Y"), date("m"));
 $resultadoVentasMes = $consultarVentasMes->fetch_assoc();
+
+$consultarUtilidadGeneral = $objVentas->consultarUtilidadGeneral();
+$resultadoUtilidadGeneral = $consultarUtilidadGeneral->fetch_assoc();
 
 
 $inversion = 1972626.25;
@@ -38,6 +40,6 @@ $saldo = $inversion + $totalVentas - $totalCompras - $totalGastos;
 $porIngresar = $resultadoPorIngresar['total'];
 $disponible = $saldo - $porIngresar;
 $ventasMes = $resultadoVentasMes['total'];
-
+$utilidadGeneral = $resultadoUtilidadGeneral['total'];
 
 ?>

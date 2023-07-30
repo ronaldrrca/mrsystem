@@ -62,6 +62,7 @@
                         <th class="cantidad_tabla">CNT</th>
                         <th class="precio_tabla">PRECIO</th>
                         <th class="subtotal_tabla">SUBTOTAL</th>
+                        <th class="subtotal_tabla ocultar">UTILIDAD</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,12 +73,17 @@
                             <td class="cantidad_tabla centrar_texto"><?php echo $datos_venta[$i]['cantidad_lineas_ventas'] ?></td>
                             <td class="precio_tabla alinear_derecha_texto"><?php echo number_format($datos_venta[$i]['precio_venta_lineas_ventas'], 2, ",", ".") ?></td>
                             <td class="subtotal_tabla alinear_derecha_texto"><?php echo number_format($datos_venta[$i]['subtotal_lineas_ventas'], 2, ",", ".") ?></td>
+                            <td class="subtotal_tabla alinear_derecha_texto ocultar"><?php echo number_format($datos_venta[$i]['utilidad_lineas_ventas'], 2, ",", ".") ?></td>
                         </tr>
                     <?php } ?>
                         
                 </tbody>
             </table>
-            <div id="contenedor_total"><span>Total $</span><input type="text" name="total" id="total_venta" class="total_venta" value="<?php echo number_format($datos_venta[0]['valor_ventas'], 2, ",", ".") ?>" readonly></div>
+            <div id="contenedor_total">
+                <span>Total $</span>
+                <input type="text" id="total_venta" class="total_venta" value="<?php echo number_format($datos_venta[0]['valor_ventas'], 2, ",", ".") ?>" readonly>
+                <input type="text" id="total_venta" class="total_venta" value="<?php echo number_format($datos_venta[0]['utilidad_ventas'], 2, ",", ".") ?>" readonly>
+            </div>
         </div>
         <div class="contenedor_botones">
             <a class="boton_regresar" href="<?=$_SERVER['HTTP_REFERER']?>">Regresar</a>

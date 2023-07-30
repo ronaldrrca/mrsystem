@@ -68,7 +68,7 @@
                     <input type="text" list="articulo1" name="articulo_1" id="articulo_1" class="descripcion_tabla">
                     <datalist id="articulo1">
                             <?php for ($i=0; $i < count($arrayArticulos); $i++) { ?>
-                                    <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] ?></option><?php } ?>
+                                    <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] . " / " . $arrayArticulos[$i]['precio_costo_promedio_articulos'] ?></option><?php } ?>
                         </datalist>
                     <input class="cantidad_tabla centrar_texto" name="cantidad_linea_1" for="cantidad" type="number" id="cantidad_linea_1">
                     <input class="precio_tabla alinear_derecha_texto" name="valor_linea_1" for="precio" type="number" id="valor_linea_1">
@@ -78,7 +78,7 @@
                 <input type="text" list="articulo2" name="articulo_2" id="articulo_2" class="descripcion_tabla">
                     <datalist id="articulo2">
                             <?php for ($i=0; $i < count($arrayArticulos); $i++) { ?>
-                                    <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] ?></option><?php } ?>
+                                    <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] . " / " . $arrayArticulos[$i]['precio_costo_promedio_articulos'] ?></option><?php } ?>
                         </datalist>
                     <input class="cantidad_tabla centrar_texto" name="cantidad_linea_2" for="cantidad" type="number" id="cantidad_linea_2">
                     <input class="precio_tabla alinear_derecha_texto" name="valor_linea_2" for="precio" type="number" id="valor_linea_2">
@@ -88,7 +88,7 @@
                 <input type="text" list="articulo3" name="articulo_3" id="articulo_3" class="descripcion_tabla">
                     <datalist id="articulo3">
                             <?php for ($i=0; $i < count($arrayArticulos); $i++) { ?>
-                                    <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] ?></option><?php } ?>
+                                    <option><?php echo $arrayArticulos[$i]['id_articulos'] . " - " . $arrayArticulos[$i]['descripcion_articulos'] . " / " . $arrayArticulos[$i]['precio_costo_promedio_articulos'] ?></option><?php } ?>
                         </datalist>
                     <input class="cantidad_tabla centrar_texto" name="cantidad_linea_3" for="cantidad" type="number" id="cantidad_linea_3">
                     <input class="precio_tabla alinear_derecha_texto" name="valor_linea_3" for="precio" type="number" id="valor_linea_3">

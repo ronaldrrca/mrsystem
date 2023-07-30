@@ -18,6 +18,9 @@ class Ventas{
   private $cantidad_articulo;
   private $valor_articulo;
   private $subtotal_articulo;
+  private $subtotal_costo_articulo;
+  private $subtotal_utilidad_articulo;
+  private $utilidad_total;
   private $anio_consulta;
   private $mes_consulta;
 
@@ -54,10 +57,11 @@ public function verVenta($idVenta){
   }//Fin de la función ver venta
 
 
-  public function registrarVenta($fechaVenta, $valorVenta, $gastosVenta, $canalVenta, $numeroMlVenta, $entregado_venta, $cobrado_venta){
+  public function registrarVenta($fechaVenta, $valorVenta, $gastosVenta, $utilidadTotal, $canalVenta, $numeroMlVenta, $entregado_venta, $cobrado_venta){
     $this->fecha=$fechaVenta;
     $this->valor=$valorVenta;
     $this->gastos=$gastosVenta;
+    $this->utilidad_total=$utilidadTotal;
     $this->canal=$canalVenta;
     $this->numeroMl=$numeroMlVenta;
     $this->entregado=$entregado_venta;
@@ -68,19 +72,21 @@ public function verVenta($idVenta){
     //Se invoca la función conectarse d ela clase Conexion
     $conexion = $objConexion -> conectarse();
 
-    $registrar = $conexion->query("call registrarVenta('$this->fecha', '$this->valor', '$this->gastos', '$this->canal', '$this->numeroMl', '$this->entregado', '$this->cobrado')");
+    $registrar = $conexion->query("call registrarVenta('$this->fecha', '$this->valor', '$this->gastos', '$this->utilidad_total', '$this->canal', '$this->numeroMl', '$this->entregado', '$this->cobrado')");
 
     return $registrar;
   }//Fin de la funcción registrar venta
 
 
-  public function registrarLineaVenta($idVenta, $idArticulo, $descripcionArticulo, $cantidadArticulo, $valorArticulo, $subtotalArticulo){
+  public function registrarLineaVenta($idVenta, $idArticulo, $descripcionArticulo, $cantidadArticulo, $valorArticulo, $subtotalArticulo, $subtotalCostoArticulo, $subtotalUtilidadArticulo){
     $this->id_venta=$idVenta;
     $this->id_articulo=$idArticulo;
     $this->descripcion_articulo=$descripcionArticulo;
     $this->cantidad_articulo=$cantidadArticulo;
     $this->valor_articulo=$valorArticulo;
     $this->subtotal_articulo=$subtotalArticulo;
+    $this->subtotal_costo_articulo=$subtotalCostoArticulo;
+    $this->subtotal_utilidad_articulo=$subtotalUtilidadArticulo;
 
     //Se instancia la clase conexión
     $objConexion = new Conexion();
@@ -89,7 +95,7 @@ public function verVenta($idVenta){
     $conexion = $objConexion -> conectarse();
 
     $registrar = $conexion->query("call registrarLineaVenta('$this->id_venta', '$this->id_articulo', '$this->descripcion_articulo', '$this->cantidad_articulo', 
-    '$this->valor_articulo', '$this->subtotal_articulo')");
+    '$this->valor_articulo', '$this->subtotal_articulo', '$this->subtotal_costo_articulo', '$this->subtotal_utilidad_articulo')");
 
     return $registrar;
   }//Fin de la función registrarLineaVenta
@@ -160,6 +166,22 @@ public function verVenta($idVenta){
     //Se retorna el resultado de la consulta
    return $consultar;
   }//Fin de la función consultarTotalPorIngresar
+
+
+
+  public function consultarUtilidadGeneral(){
+    //Se instancia la clase Conexion
+   $objConexion = new Conexion();
+
+   //Se invoca la función conectarse() de la clase Conexion
+   $conexion = $objConexion -> conectarse();
+ 
+    $consultar = $conexion->query("call consultarUtilidadGeneral()");
+ 
+ 
+    //Se retorna el resultado de la consulta
+    return $consultar;
+  }
 
 
 

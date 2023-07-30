@@ -29,10 +29,6 @@
                 <span><?php echo "$ " . number_format($totalValorInventario, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
-                <span>Compras</span>
-                <span><?php echo "$ " . number_format($totalCompras, 2, ",", ".") ?></span>
-            </div>
-            <div class="elemento_administracion">
                 <span>Gastos</span>
                 <span><?php echo "$ " . number_format($totalGastos, 2, ",", ".") ?></span>
             </div>
@@ -55,6 +51,10 @@
             <div class="elemento_administracion">
                 <span>Ventas del mes</span>
                 <span><?php echo "$ " . number_format($ventasMes, 2, ",", ".") ?></span>
+            </div>
+            <div class="elemento_administracion">
+                <span>Utilidad general</span>
+                <span><?php echo "$ " . number_format($utilidadGeneral, 2, ",", ".") ?></span>
             </div>
         </section>
     </main>
