@@ -169,14 +169,14 @@ public function verVenta($idVenta){
 
 
 
-  public function consultarUtilidadGeneral(){
+  public function consultarUtilidad(){
     //Se instancia la clase Conexion
    $objConexion = new Conexion();
 
    //Se invoca la función conectarse() de la clase Conexion
    $conexion = $objConexion -> conectarse();
  
-    $consultar = $conexion->query("call consultarUtilidadGeneral()");
+    $consultar = $conexion->query("call consultarUtilidad()");
  
  
     //Se retorna el resultado de la consulta

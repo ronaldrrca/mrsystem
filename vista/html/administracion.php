@@ -53,8 +53,8 @@
                 <span><?php echo "$ " . number_format($ventasMes, 2, ",", ".") ?></span>
             </div>
             <div class="elemento_administracion">
-                <span>Utilidad general</span>
-                <span><?php echo "$ " . number_format($utilidadGeneral, 2, ",", ".") ?></span>
+                <span>Utilidad</span>
+                <span><?php echo "$ " . number_format($utilidad, 2, ",", ".") ?></span>
             </div>
         </section>
     </main>
